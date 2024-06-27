@@ -12,12 +12,12 @@
 
 <body>
     <section>
-
-        <header>
-
-        </header>
-
         <main>
+            <header>
+                <div class="bannerMovie-conteiner">
+                    <img src="" alt="">
+                </div>
+            </header>
 
             <div class="movieBanner-container">
                 <img src="./img/castelo-animado.jpg" alt="" class="movie-img">
@@ -40,36 +40,47 @@
                 </div>
             </div>
             <div class="movieInfo-container">
-
+                
                 <div class="tittleMovie-container">
                     <h1 class="movieTittle">O Castelo Animado</h1>
-                   <i class="fa-regular fa-heart"></i> 
+                    <i class="fa-solid fa-heart"></i>
                 </div>
                 <div class="movieInfo-div">
-
-                    <div class="select-container escolha-container">
-                        <label for="status-select">Status</label>
-                        <select name="status-select" id="">
-                            <option value="" >Planejando Assistir</option>
-                            <option value="" >Assistido</option>
-                            <option value="" >Abandonado</option>
+                    <div class="select-box">
+                        <div class="select-container escolha-container">
+                            <!-- <label for="status-select">Status</label> -->
+                            <h2>Status</h2>
+                            <select name="status-select" id="">
+                                <option value="" >Planejando Assistir</option>
+                                <option value="" >Assistido</option>
+                                <option value="" >Abandonado</option>
+                            </select>
+                        </div>
+    
+                        <div class="select-container privacidade-container">
+                            <!-- <label for="">Privacidade</label> -->
+                            <h2>Privacidade</h2>
+                            <select name="" id="">
+                                <option value="" >Público</option>
+                                <option value="" >Privado</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="date-container dataInicio">
-                        <label for="dateInit">Data de inicio</label>
-                        <input type="date" name="dateInit" id="dateInit">
+            
+                    <div class="date-calender">
+                        <div class="date-container dataInicio">
+                            <!-- <label for="dateInit">Data de inicio</label> -->
+                            <h2>Data de inicio</h2>
+                            <input type="date" name="dateInit" id="dateInit">
+                        </div>
+    
+                        <div class="date-container dateEnd">    
+                            <!-- <label for="dateEnd">Data de Término</label> -->
+                            <h2>Data de Término</h2>
+                            <input type="date" name="dateEnd" id="dateEnd">
+                        </div>
                     </div>
-
-                    <div class="select-container privacidade-container">
-                        <label for="">Privacidade</label>
-                        <select name="" id="">
-                            <option value="" >Público</option>
-                            <option value="" >Privado</option>
-                    </div>
-                    <div class="date-container dateEnd">    
-                        <label for="dateEnd">Data de inicio</label>
-                        <input type="date" name="dateEnd" id="dateEnd">
-                    </div>
-            </div>
+                </div>
 
         </div>
 
