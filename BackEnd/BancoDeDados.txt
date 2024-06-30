@@ -1,0 +1,10 @@
+{ Titulo: Nausicaa
+Status: Assistido
+Privacidade: false
+Nota: 90
+Duração: 160},
+{ Titulo: Nausicaa
+Status: Assistido
+Privacidade: false
+Nota: 90
+Duração: 160},
