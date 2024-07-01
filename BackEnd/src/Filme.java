@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class Filme extends Midia{
     int duracao;
 
@@ -26,7 +27,26 @@ public class Filme extends Midia{
 
     @Override
     public String toString() {
-        return "{ Titulo: " + getTitulo() + "\nStatus: " + getStatus() + "\nPrivacidade: " + isPrivacidade() + "\nNota: " + getNota() + "\nDuração: " + getDuracao() + "},\n";
+        return "{\nTitulo: " + getTitulo() + "\nStatus: " + getStatus() + "\nPrivacidade: " + isPrivacidade() + "\nNota: " + getNota() + "\nDuração: " + getDuracao() + "\n},\n";
     }
     
+    public void montarFilme(){
+
+        Scanner leInfoFilme = new Scanner(System.in);
+
+        System.out.println("== Adcionar filme ==");
+        System.out.print("Digite o titulo do filme: ");
+        setTitulo(leInfoFilme.nextLine());
+
+        setStatus();
+
+        System.out.print("Deseja manter a avaliação pública?\n(1) Sim\n(2) Não \n>>> Escolha: ");
+        setPrivacidade((leInfoFilme.nextInt() == 1) ? true : false);
+
+        System.out.print("Digite a nota do filme(insira um valor de 0 a 100): ");
+        setNota(leInfoFilme.nextInt());
+
+        System.out.print("Digite a duração do filme(Min): ");
+        setDuracao(leInfoFilme.nextInt());
+    }
 }

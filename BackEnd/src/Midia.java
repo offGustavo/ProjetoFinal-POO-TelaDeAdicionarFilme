@@ -1,7 +1,5 @@
-import java.io.IOException;
 import java.util.Scanner;
 
-import javax.sound.midi.SysexMessage;
 
 public class Midia {
     String titulo, status;
@@ -84,6 +82,8 @@ public class Midia {
                     break;
                
                }
+
+               leStatus.close();
         this.status = status;
     }
 
@@ -97,7 +97,7 @@ public class Midia {
         int escolha;
 
             do {
-            System.out.print("Deseja mander a avaliação pública?\n(1) Sim\n(2) Não \n>>> Escolha: ");
+            System.out.print("Deseja manter a avaliação pública?\n(1) Sim\n(2) Não \n>>> Escolha: ");
             escolha = lePriv.nextInt();
 
             privacidade = (escolha == 1) ? true : false;
@@ -114,7 +114,6 @@ public class Midia {
 
     @Override
     public String toString() {
-        return "{ Titulo: " + getTitulo() + "\nStatus: " + getStatus() + "\nPrivacidade: " + isPrivacidade() + "\nNota: "
-                + getNota() + "},\n";
+        return "{\nTitulo: " + getTitulo() + "\nStatus: " + getStatus() + "\nPrivacidade: " + isPrivacidade() + "\nNota: " + getNota() + "\n},\n";
     }
 }

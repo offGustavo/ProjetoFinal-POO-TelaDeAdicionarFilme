@@ -1,6 +1,6 @@
 import java.io.*;
-import java.nio.*;
-import java.nio.file.*;
+// import java.nio.*;
+// import java.nio.file.*;
 
 public class EscreveArquivo {
 
@@ -9,7 +9,6 @@ public class EscreveArquivo {
         try {
 
             FileWriter fw = new FileWriter("BancoDeDados.txt", true);
-            BufferedWriter bw = new BufferedWriter(fw);
             fw.write(info.toString());
 
             fw.close();
