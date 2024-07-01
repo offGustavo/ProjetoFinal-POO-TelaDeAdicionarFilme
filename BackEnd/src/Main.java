@@ -2,6 +2,11 @@ import java.util.Scanner;
 import java.io.*;
 import java.nio.*;
 import java.nio.file.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -25,7 +30,7 @@ public class Main {
                         gravador.gravaNoArq(filme);
                         break;
                     case 3:
-
+                        CarregaDados();
                     break;
                 }
 
@@ -40,4 +45,31 @@ public class Main {
 
 
     }
+
+        public static void CarregaDados() {
+
+        try {
+            List<String> informacoes = lerArquivo("BancoDeDados.txt");
+            String[] arrayInformacoes = informacoes.toArray(new String[0]);
+
+            // Exibindo as informações separadas em um array
+            for (String info : arrayInformacoes) {
+                System.out.println(info);
+            }
+        } catch (IOException e) {
+            System.err.println("Erro ao ler o arquivo: " + e.getMessage());
+        }
+    }
+
+    public static List<String> lerArquivo(String nomeArquivo) throws IOException {
+        List<String> linhas = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader(nomeArquivo))) {
+            String linha;
+            while ((linha = br.readLine()) != null) {
+                linhas.add(linha);
+            }
+        }
+        return linhas;
+    }
 }
+
