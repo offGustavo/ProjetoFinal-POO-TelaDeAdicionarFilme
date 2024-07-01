@@ -27,7 +27,7 @@ public class Filme extends Midia{
 
     @Override
     public String toString() {
-        return "{\nTitulo: " + getTitulo() + "\nStatus: " + getStatus() + "\nPrivacidade: " + isPrivacidade() + "\nNota: " + getNota() + "\nDuração: " + getDuracao() + "\n},\n";
+        return "{\nTitulo: " + getTitulo() + "\nStatus: " + getStatus() + "\nPrivacidade: " + isPrivacidade() + "\nNota: " + getNota() + "\nDuracao: " + getDuracao() + "\n},\n";
     }
     
     public void montarFilme(){
