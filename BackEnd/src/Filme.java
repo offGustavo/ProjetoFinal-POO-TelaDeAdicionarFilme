@@ -38,20 +38,23 @@ public class Filme extends Midia {
             System.out.print("Digite o título do filme: ");
             setTitulo(leInfoFilme.nextLine());
 
-            setStatus();
+            boolean assistido = setStatus();
 
-            System.out.print("Deseja manter a avaliação pública?\n(1) Sim\n(2) Não \n>>> Escolha: ");
-            setPrivacidade(leInfoFilme.nextInt() == 1);
+            if(!assistido){
+                System.out.print("Deseja manter a avaliação pública?\n(1) Sim\n(2) Não \n>>> Escolha: ");
+                setPrivacidade(leInfoFilme.nextInt() == 1);
 
-            System.out.print("Digite a nota do filme (insira um valor de 0 a 100): ");
-            setNota(leInfoFilme.nextInt());
+                System.out.print("Digite a nota do filme (insira um valor de 0 a 100): ");
+                setNota(leInfoFilme.nextInt());
+            }
 
             System.out.print("Digite a duração do filme (Min): ");
             setDuracao(leInfoFilme.nextInt());
         } catch (Exception e) {
             System.out.println("Erro na entrada de dados: " + e.getMessage());
-        } finally {
-            leInfoFilme.close();
         }
+        // } finally {
+        //     leInfoFilme.close();
+        // }
     }
 }

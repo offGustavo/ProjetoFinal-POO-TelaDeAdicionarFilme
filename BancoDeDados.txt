@@ -1,0 +1,56 @@
+{
+Titulo: Nausicaa
+Status: Assistido
+Privacidade: false
+Nota: 90
+Duração: 118
+},
+
+{
+Titulo: Nausicaa
+Status: Assistido
+Privacidade: true
+Nota: 90
+Duração: 160
+},
+
+{
+Titulo: Nausicaa
+Status: Assistido
+Privacidade: true
+Nota: 90
+Duração: 160
+},
+
+{
+Titulo: Nausicaa
+Status: Assistido
+Privacidade: true
+Nota: 90
+Duração: 160
+},
+
+{
+Titulo: null
+Status: null
+Privacidade: false
+Nota: 0
+Duração: 0
+},
+
+{
+Titulo: nÆo sei
+Status: Planejando Assistir
+Privacidade: true
+Nota: 90
+Duração: 90
+},
+
+{
+Titulo: Dune 2
+Status: Planejando Assistir
+Privacidade: true
+Nota: 90
+Duração: 187
+},
+

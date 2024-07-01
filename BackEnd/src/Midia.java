@@ -50,7 +50,7 @@ public class Midia {
         this.status = status;
     }
 
-    public void setStatus() {
+    public boolean setStatus() {
         Scanner leStatus = new Scanner(System.in);
         System.out.print("Escolha o status: \n(1) Assistido\n(2) Planejando Assistir\n(3) Abandonado\n>>> Escolha: ");
         int escolha = leStatus.nextInt();
@@ -58,16 +58,16 @@ public class Midia {
         switch (escolha) {
             case 1:
                 this.status = "Assistido";
-                break;
+                return false;
             case 2:
                 this.status = "Planejando Assistir";
-                break;
+                return true;
             case 3:
                 this.status = "Abandonado";
-                break;
+                return false;
             default:
                 System.out.println("Escolha inválida!");
-                break;
+                return false;
         }
     }
 

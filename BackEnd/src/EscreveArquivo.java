@@ -11,7 +11,7 @@ public class EscreveArquivo {
             fw.write("\n");
         } catch (IOException e) {
             System.err.println("Erro ao escrever no arquivo: " + e.getMessage());
-        } finally {
+        } //finally {
             try {
                 if (fw != null) {
                     fw.close();
@@ -19,6 +19,6 @@ public class EscreveArquivo {
             } catch (IOException e) {
                 System.err.println("Erro ao fechar o arquivo: " + e.getMessage());
             }
-        }
+        // }
     }
 }
